@@ -44,7 +44,7 @@ public class BoardController {
         return "boards/detail";
     }
 
-    @PostMapping("/post/edit/{id}")
+    @GetMapping("/post/edit/{id}")
     public String editForm(@PathVariable Long id, Model model){
         boardService.findBoardById(id).ifPresent(board->model.addAttribute("board", board));
         return "boards/edit";
