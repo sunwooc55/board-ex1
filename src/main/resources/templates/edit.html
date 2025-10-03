@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>글 수정</h1>
-    <form th:action="@{/post/edot/{id}(id=${board.id})}" method = "post">
+    <form th:action="@{/post/edit/{id}(id=${board.id})}" method = "post">
         <p>제목: <input type="text" name="title" th:value="${board.title}"></p>
         <p>내용: <textarea name="content" th:text="${board.content}"></textarea></p>
         <p>작성자: <input type="text" name="author" th:value="${board.author}"></p>
